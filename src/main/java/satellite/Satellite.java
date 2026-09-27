@@ -43,7 +43,8 @@ public class Satellite {
     }
 
     public static void main(String[] args) throws Exception {
-        Scanner input = new Scanner(new File("input.txt"));
+        String fileName = args.length > 0 ? args[0] : "input.txt";
+        Scanner input = new Scanner(new File(fileName));
         noOfRows = input.nextInt();
         noOfCols = input.nextInt();
         oldImage = readImage(input);
